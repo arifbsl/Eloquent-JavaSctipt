@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <title>Chessboard</title>
+</head>
+<body>
+  <!-- 
+    Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a "#" character. The characters should form a chessboard.
+   -->
+
+
+   <script>
+     let chessboard = (row, column) => {
+      for(let i = 0; i < row; i++) {
+          //If odd then start with ' '
+          //Else start with '#'
+          let start = i % 2 === 1 ? ' ' : "#";
+
+
+          //Temp str to stor the pattern of the column
+          let str = "";
+          for(let j = 0; j < column; j++) {
+              start = start == "#"? " " : "#"; 	
+              str += start;
+          }
+          console.log(str);
+      }
+      
+    }
+
+    chessboard(8, 8);
+   </script>
+</body>
+</html>
